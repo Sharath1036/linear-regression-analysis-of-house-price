@@ -27,6 +27,6 @@ FIG 8
 ![linear price+crime_rate](https://user-images.githubusercontent.com/83855796/233776345-05a9e63d-a448-4547-a70b-4e2303a32712.png)
 
 FIG 9
-![image](https://user-images.githubusercontent.com/83855796/233776489-317b2ccb-bcd8-4a4e-b97f-89f87160a3eb.png)
+![image](https://user-images.githubusercontent.com/83855796/233777157-fe22fde9-3fa5-4366-a1aa-aedbc7e96ff3.png)
 
 
