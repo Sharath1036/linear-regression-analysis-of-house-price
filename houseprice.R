@@ -1,7 +1,7 @@
 #In this analysis we consider price as a dependent variable while considering other variables as independent variables. We have to find the relation of price with other variables 
 
 require("LiblineaR")
-df <- read.csv("D:/Udemy Course Notes/Machine Learning/Datasets/House_Price.csv", header=TRUE)
+df <- read.csv("D:/Machine Learning/Datasets/House_Price.csv", header=TRUE)
 View(df)
 summary(df)
 #From the analysis we can conclude that there is skewness or outlier issues in three columns i.e. 'crime_rate', 'n_hot_rooms' and 'rainfall'
@@ -79,7 +79,7 @@ summary(multiple_model)
 # The equation for house price is price = -3.043 + 0.128*crime_rate - 0.042*resid_area - 21.307*air_qual - 1.202*avg_dist + 1.239*airportYES + 0.83*waterbody_Lake + 0.582*waterbody_None + 0.408*waterbody_River
 
 # Conclusion
-# air_wual, avg_dist, airportYES are significantly impacting house price
+# air_qual, avg_dist, airportYES are significantly impacting house price
 
 
 
