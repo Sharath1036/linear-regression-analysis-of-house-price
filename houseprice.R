@@ -4,14 +4,14 @@ require("LiblineaR")
 df <- read.csv("D:/Machine Learning/Datasets/House_Price.csv", header=TRUE)
 View(df)
 summary(df)
-#From the analysis we can conclude that there is skewness or outlier issues in three columns i.e. 'crime_rate', 'n_hot_rooms' and 'rainfall'
+# (FIG 1) From the analysis we can conclude that there is skewness or outlier issues in three columns i.e. 'crime_rate', 'n_hot_rooms' and 'rainfall'
 
-hist(df$crime_rate)
-pairs(~price+crime_rate+n_hot_rooms+rainfall, data=df)
+hist(df$crime_rate) # FIG 2
+pairs(~price+crime_rate+n_hot_rooms+rainfall, data=df) # FIG 3
 
-barplot(table(df$airport))
-barplot(table(df$waterbody))
-barplot(table(df$bus_ter))
+barplot(table(df$airport)) # FIG 4
+barplot(table(df$waterbody)) # FIG 5
+barplot(table(df$bus_ter)) # FIG 6
 
 # n_hot_rooms and rainfall are outliers
 # n_hos_beds has missing values
@@ -35,9 +35,9 @@ df$rainfall[df$rainfall>MN] <- MN
 summary(df$rainfall)
 
 #  Now we find relationship between price and crime_rate
-plot(df$price, df$crime_rate) # The relationship seems to be logarithmic
+plot(df$price, df$crime_rate) # The relationship seems to be logarithmic (FIG 7)
 df$crime_rate <- log(1+df$crime_rate)
-plot(df$price, df$crime_rate) #now the relationship is linear
+plot(df$price, df$crime_rate) #now the relationship is linear (FIG 8)
 
 
 # As shown in the dataset, there are four dist variables. Instead of getting a seperate relation for each, we find mean of all four to get a single variable
@@ -74,7 +74,7 @@ mean(df$n_hos_beds, na.rm=TRUE)
 
 # Since we got all numeric values, we use Multiple Linear Regression for finding equation of price with all other variables
 multiple_model <- lm(price~., data=df)
-summary(multiple_model)
+summary(multiple_model) # FIG 9
 
 # The equation for house price is price = -3.043 + 0.128*crime_rate - 0.042*resid_area - 21.307*air_qual - 1.202*avg_dist + 1.239*airportYES + 0.83*waterbody_Lake + 0.582*waterbody_None + 0.408*waterbody_River
 
