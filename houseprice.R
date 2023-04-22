@@ -80,13 +80,3 @@ summary(multiple_model) # FIG 9
 
 # Conclusion
 # air_qual, avg_dist, airportYES are significantly impacting house price
-
-
-
-
-
-
-png(filename = "D:/Udemy Course Notes/Machine Learning/Plots/houseprice plots/linear price+crime_rate.png")
-plot(df$price, df$crime_rate)
-dev.off()
-
